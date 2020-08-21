@@ -5,8 +5,9 @@ import {createCorn} from "./seeds/corn.js"
 import {createPotato} from "./seeds/potato.js"
 import {createSoybeans} from "./seeds/soybean.js"
 import {createWheat} from "./seeds/wheat.js"
+import {addPlant} from "./field.js"
 
-
+ 
 console.log("Welcome to the main module")
 
 const yearlyPlan = createPlan()
@@ -17,13 +18,8 @@ const plantedPotato = createPotato()
 const plantedSoybeans = createSoybeans()
 const plantedWheat = createWheat()
 
-createPlan()
-createAsparagus()
-createSunflower()
-createCorn()
-createPotato()
-createSoybeans()
-createWheat()
+const plantedPlants = addPlant(plantedCorn) 
+
 
 console.log(plantedAsparagus)
 console.log(plantedSunflower)
@@ -31,3 +27,9 @@ console.log(plantedCorn)
 console.log(plantedPotato)
 console.log(plantedSoybeans)
 console.log(plantedWheat)
+
+console.log("THIS IS WHERE FIELD.JS STARTS")
+console.log(plantedPlants)
+
+
+
